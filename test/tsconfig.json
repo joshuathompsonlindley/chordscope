@@ -1,0 +1,14 @@
+{
+  // Tests index arrays freely, so they do not carry the app's stricter indexed-access checking.
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "noUncheckedIndexedAccess": false,
+    "types": ["node"],
+    "paths": {
+      "@core/*": ["../src/core/*"],
+      "@ui/*": ["../src/ui/*"],
+      "@test/*": ["./*"]
+    }
+  },
+  "include": ["../src", "."]
+}

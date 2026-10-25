@@ -1,0 +1,218 @@
+:root {
+  --bg: #eeedeb;
+  --fg: #000;
+  --muted: #78716c;
+  --card: #fff;
+  --line: #d6d3d1;
+  --accent: #000;
+  --warn: #000;
+  --err: #000;
+  --shadow: 0 1px 3px rgb(0 0 0 / 0.08);
+  --control: #8a8580; /* the edge of a control: 3:1 against the page, which the faint --line is not */
+}
+:root[data-theme="dark"] {
+  --bg: #0e0d0c;
+  --fg: #fff;
+  --muted: #a8a29e;
+  --card: #1c1a19;
+  --line: #34302e;
+  --accent: #fff;
+  --warn: #fff;
+  --err: #fff;
+  --control: #78716c;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font:
+    16px/1.5 system-ui,
+    sans-serif;
+}
+main {
+  position: relative;
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+h1 {
+  margin: 0 0 0.25rem;
+  font-size: 1.6rem;
+}
+.sub {
+  margin: 0 0 1.5rem;
+  color: var(--muted);
+}
+.drop {
+  border: 2px dashed var(--control);
+  border-radius: 0.75rem;
+  background: var(--card);
+}
+.drop.compact {
+  border-width: 1px;
+  font-size: 0.9rem;
+}
+.drop-button {
+  display: block;
+  width: 100%;
+  padding: 2rem 1rem;
+  font: inherit;
+  color: inherit;
+  text-align: center;
+  background: none;
+  border: 0;
+  border-radius: inherit;
+  cursor: pointer;
+}
+.drop.compact .drop-button {
+  padding: 0.55rem 1rem;
+  text-align: left;
+}
+.drop-hint {
+  color: var(--muted);
+}
+.drop:hover,
+.drop.over {
+  border-color: var(--accent);
+}
+
+/* Anyone using the keyboard needs to see where they are. */
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+.error {
+  color: var(--err);
+  font-weight: 600;
+}
+.muted {
+  color: var(--muted);
+}
+
+/* Panels: the key and the chords each sit on a card, so they stand off the page. */
+.card,
+.table-wrap {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow);
+}
+
+/* The answer: the key, with the reasoning under it. */
+.summary {
+  margin-top: 1.25rem;
+}
+.card {
+  padding: 1.25rem 1.5rem;
+}
+.card .label {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 0.1rem;
+}
+.card .big {
+  position: relative;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.15;
+  text-wrap: balance;
+}
+.card .note {
+  margin-top: 0.35rem;
+  color: var(--warn);
+}
+
+/* A hover tip that needs no script: the text sits in data-tip. */
+.has-tip {
+  cursor: help;
+  text-decoration: underline dotted var(--muted);
+  text-underline-offset: 0.2em;
+}
+.big[data-dismissed="true"] .has-tip::after {
+  display: none;
+}
+.has-tip:hover::after,
+.has-tip:focus::after {
+  content: attr(data-tip);
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: 10;
+  margin-top: 0.4rem;
+  width: max-content;
+  max-width: 22rem;
+  padding: 0.5rem 0.7rem;
+  white-space: pre-line;
+  font-size: 0.85rem;
+  font-weight: 400;
+  line-height: 1.4;
+  text-decoration: none;
+  background: var(--fg);
+  color: var(--bg);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 16px rgb(0 0 0 / 0.25);
+}
+
+.chords-section {
+  margin-top: 1.25rem;
+}
+
+/* The chords as text. */
+.table-wrap {
+  overflow-x: auto;
+}
+table {
+  width: 100%;
+  min-width: 34rem; /* a narrow screen scrolls the table sideways rather than squeezing each note onto its own line */
+  border-collapse: collapse;
+}
+th,
+td {
+  padding: 0.6rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+tr:last-child th,
+tr:last-child td {
+  border-bottom: 0;
+}
+thead th {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+tbody th {
+  font-weight: 700;
+  white-space: nowrap;
+}
+td:first-child {
+  white-space: nowrap;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+  padding: 0.25rem 0.7rem;
+  font: inherit;
+  font-size: 0.85rem;
+  color: inherit;
+  background: var(--card);
+  border: 1px solid var(--control);
+  border-radius: 0.5rem;
+  cursor: pointer;
+}

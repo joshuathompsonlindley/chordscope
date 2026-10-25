@@ -1,0 +1,84 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`page > renders funk.mid > announcement 1`] = `"Key, from the chords: F# minor. 3 chords found."`;
+
+exports[`page > renders funk.mid > chord table 1`] = `
+[
+  [
+    "Em9",
+    "E3 G4 B4 D5 F#5",
+    "F# minor: vii9 · outside G",
+  ],
+  [
+    "F#m7",
+    "F#3 A4 C#5 E5",
+    "F# minor: i7Also reads as A6/F#",
+  ],
+  [
+    "B9(no5)",
+    "B3 A4 C#5 D#5",
+    "F# minor: IV9 · outside D#",
+  ],
+]
+`;
+
+exports[`page > renders funk.mid > key label 1`] = `"Key, from the chords"`;
+
+exports[`page > renders funk.mid > keys 1`] = `
+[
+  [
+    "F# minor",
+    "Medium confidence · 65%
+next closest A major 9%",
+  ],
+]
+`;
+
+exports[`page > renders waltz.mid > announcement 1`] = `"Key, from the chords: C major. 6 chords found."`;
+
+exports[`page > renders waltz.mid > chord table 1`] = `
+[
+  [
+    "C",
+    "C3 E3 G3 C4",
+    "C major: I",
+  ],
+  [
+    "Am",
+    "A2 E3 A3 C4",
+    "C major: vi",
+  ],
+  [
+    "Dm",
+    "D3 F3 A3 D4",
+    "C major: ii",
+  ],
+  [
+    "G7",
+    "G2 D3 F3 B3",
+    "C major: V7",
+  ],
+  [
+    "C",
+    "C3 E3 G3 C4",
+    "C major: I",
+  ],
+  [
+    "F",
+    "F2 C3 F3 A3",
+    "C major: IV",
+  ],
+]
+`;
+
+exports[`page > renders waltz.mid > key label 1`] = `"Key, from the chords"`;
+
+exports[`page > renders waltz.mid > keys 1`] = `
+[
+  [
+    "C major",
+    "High confidence · 89%
+next closest A minor 8%",
+  ],
+]
+`;

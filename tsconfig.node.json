@@ -1,0 +1,9 @@
+{
+  // The build and lint config files run in Node, not the browser.
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "lib": ["ES2023"],
+    "types": ["node"]
+  },
+  "include": ["vite.config.ts", "eslint.config.js"]
+}

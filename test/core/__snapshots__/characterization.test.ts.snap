@@ -1,0 +1,175 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`whole-clip analysis of the real DAW exports > funk clip 1`] = `
+{
+  "detected": {
+    "chords": [
+      "Em9 @0+3",
+      "F#m7 @4+6",
+      "B9(no5) @12+2.625",
+    ],
+    "keyBasis": "chord function",
+    "keys": [
+      [
+        6,
+        true,
+        1.194021048,
+      ],
+      [
+        9,
+        false,
+        1.095304512,
+      ],
+      [
+        11,
+        true,
+        1.087348575,
+      ],
+      [
+        4,
+        false,
+        1.081479855,
+      ],
+      [
+        2,
+        false,
+        1.068623404,
+      ],
+      [
+        4,
+        true,
+        1.048175444,
+      ],
+    ],
+  },
+  "onset": {
+    "chords": [
+      "Em9 @0+1.2916666666666667",
+      "F#m7 @4+2.583333333333333",
+      "B9(no5) @12+1.2916666666666667",
+    ],
+    "keyBasis": "chord function",
+    "keys": [
+      [
+        6,
+        true,
+        1.186046543,
+      ],
+      [
+        9,
+        false,
+        1.092017954,
+      ],
+      [
+        4,
+        false,
+        1.087296622,
+      ],
+      [
+        11,
+        true,
+        1.08494014,
+      ],
+      [
+        2,
+        false,
+        1.061065981,
+      ],
+      [
+        4,
+        true,
+        1.050915097,
+      ],
+    ],
+  },
+}
+`;
+
+exports[`whole-clip analysis of the real DAW exports > prog clip 1`] = `
+{
+  "detected": {
+    "chords": [
+      "C#6/9 @0+4",
+      "D#6/9 @4+1.5",
+      "A#m11 @5.5+6.5",
+      "Fm11(no5) @12+1.5",
+      "F#maj9#11(no3) @13.5+2.5",
+    ],
+    "keyBasis": "chord function",
+    "keys": [
+      [
+        10,
+        true,
+        1.293187544,
+      ],
+      [
+        1,
+        false,
+        1.249540183,
+      ],
+      [
+        8,
+        false,
+        1.174562675,
+      ],
+      [
+        5,
+        true,
+        1.172759474,
+      ],
+      [
+        6,
+        false,
+        1.068967295,
+      ],
+      [
+        3,
+        true,
+        1.063826872,
+      ],
+    ],
+  },
+  "onset": {
+    "chords": [
+      "C#6/9 @0+4",
+      "D#6/9 @4+1.5",
+      "A#m11 @5.5+6.5",
+      "Fm11(no5) @12+1.5",
+      "F#maj9#11(no3) @13.5+2.5",
+    ],
+    "keyBasis": "chord function",
+    "keys": [
+      [
+        10,
+        true,
+        1.293187544,
+      ],
+      [
+        1,
+        false,
+        1.249540183,
+      ],
+      [
+        8,
+        false,
+        1.174562675,
+      ],
+      [
+        5,
+        true,
+        1.172759474,
+      ],
+      [
+        6,
+        false,
+        1.068967295,
+      ],
+      [
+        3,
+        true,
+        1.063826872,
+      ],
+    ],
+  },
+}
+`;
