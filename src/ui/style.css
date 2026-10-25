@@ -46,6 +46,9 @@ h1 {
   margin: 0 0 1.5rem;
   color: var(--muted);
 }
+.ext {
+  margin: 2rem 0 0;
+}
 .drop {
   border: 2px dashed var(--control);
   border-radius: 0.75rem;
